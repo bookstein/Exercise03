@@ -13,11 +13,13 @@ def main():
         tokens = input.split(" ")
         if tokens[0] == 'q':
             break
-        if tokens[1].isdigit() and tokens[2].isdigit():
-            cmd, number1, number2 = tokens[0], int(tokens[1]), int(tokens[2])
-        else:
+            
+        try:
+            cmd, number1, number2 = tokens[0], float(tokens[1]), float(tokens[2])
+        except ValueError:
             print "This calculator can only calculate numbers."
             continue
+        
         if cmd == '+':
             print arithmetic.add(number1, number2)
         elif cmd == '-':
