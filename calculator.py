@@ -9,35 +9,32 @@ import arithmetic
 def main():
 
     while True:
-        input = raw_input("> ")
-        tokens = input.split(" ")
+        user_input = raw_input("> ")
+        tokens = user_input.split()
         if tokens[0] == 'q':
             break
-            
+
         try:
             cmd, number1, number2 = tokens[0], float(tokens[1]), float(tokens[2])
         except ValueError:
             print "This calculator can only calculate numbers."
             continue
-        
-        if cmd == '+':
-            print arithmetic.add(number1, number2)
-        elif cmd == '-':
-            print arithmetic.subtract(number1, number2)
-        elif cmd == '*':
-            print arithmetic.multiply(number1, number2)
-        elif cmd == '/':
-            print arithmetic.divide(number1, number2)
-        elif cmd == 'pow':
-            print arithmetic.power(number1, number2)
-        elif cmd == 'square':
-            print arithmetic.square(number1, number2)
-        elif cmd == 'cube':
-            print arithmetic.cube(number1, number2)
-        elif cmd == 'mod':
-            print arithmetic.mod(number1, number2)
+
+        arithmetic_functions = {
+            '+': arithmetic.add,
+            '-': arithmetic.subtract,
+            '*': arithmetic.multiply,
+            '/': arithmetic.divide,
+            'pow': arithmetic.power,
+            'square': arithmetic.square,
+            'cube': arithmetic.cube,
+            'mod': arithmetic.mod
+        }
+
+        if cmd in arithmetic_functions:
+            print arithmetic_functions[cmd](number1, number2)
         else:
-            print "I don't understand"
+            print "That is not a valid command. Try again. Format: Operation Number1 Number2"
 
    
 if __name__ == '__main__':
