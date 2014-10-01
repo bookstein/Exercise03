@@ -16,12 +16,27 @@ def main():
         input = raw_input("> ")
         #     tokenize input
         tokens = input.split(" ")
-        number1, number2 = int(tokens[1]), int(tokens[2])
-
         if tokens[0] == 'q':
             break
-        elif tokens[0] == '+':
+        cmd, number1, number2 = tokens[0], int(tokens[1]), int(tokens[2])
+        if cmd == '+':
             print arithmetic.add(number1, number2)
+        elif cmd == '-':
+            print arithmetic.subtract(number1, number2)
+        elif cmd == '*':
+            print arithmetic.multiply(number1, number2)
+        elif cmd == '/':
+            print arithmetic.divide(number1, number2)
+        elif cmd == 'pow':
+            print arithmetic.power(number1, number2)
+        elif cmd == 'square':
+            print arithmetic.square(number1, number2)
+        elif cmd == 'cube':
+            print arithmetic.cube(number1, number2)
+        elif cmd == 'mod':
+            print arithmetic.mod(number1, number2)
+        else:
+            print "I don't understand"
 
     #     if the first token is 'q', quit
     #     otherwise decide which math function to call based on the tokens we read
