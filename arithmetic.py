@@ -26,7 +26,7 @@
 
 def add(*args):
     """Returns the sum of the two input integers"""
-    total = num1 + num2
+    total = 0
     if args[0] == False:
         return total
     for a in args[0]:
@@ -35,9 +35,9 @@ def add(*args):
 
 def subtract(*args):
     """Returns the second number subtracted from the first"""
-    total = num1 - num2
     if args[0] == False:
-        return total
+        return 0
+    total = args[0][0] #- args[0][1]
     for a in args[0]:
         total = total - float(a)
     return total
@@ -52,6 +52,7 @@ def multiply(*args):
     return total
 
 def divide(*args):
+    pass
     """Divides the first input by the second, returning a floating point"""
     total = num1 / num2
     if args[0] == False:
@@ -61,14 +62,17 @@ def divide(*args):
     return total
 
 def square(*args):
+    pass
     """Returns the square of the input"""
     return num1**2
 
 def cube(*args):
+    pass
     """ Returns the cube of the input"""
     return num1**3
 
 def power(*args):
+    pass
     """Raises the first integer to the power of the second integer and returns the value"""
     total = num1 ** num2
     if args[0] == False:
@@ -78,6 +82,7 @@ def power(*args):
     return total
 
 def mod(*args):
+    pass
     """Returns the remainder when the first integer is divided by the second integer."""
     total = num1 % num2
     if args[0] == False:

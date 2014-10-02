@@ -35,7 +35,7 @@ def main():
         }
 
         if cmd in arithmetic_functions:
-            print arithmetic_functions[cmd](number1, number2, remaining_args)
+            print arithmetic_functions[cmd](remaining_args)
         else:
             print "That is not a valid command. Try again. Format: Operation Number1 Number2"
 
