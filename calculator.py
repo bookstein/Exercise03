@@ -14,8 +14,11 @@ def main():
         if tokens[0] == 'q':
             break
 
+        remaining_args = False
         try:
             cmd, number1, number2 = tokens[0], float(tokens[1]), float(tokens[2])
+            if len(tokens) > 3:
+                remaining_args = tokens[3:]
         except ValueError:
             print "This calculator can only calculate numbers."
             continue
@@ -32,7 +35,7 @@ def main():
         }
 
         if cmd in arithmetic_functions:
-            print arithmetic_functions[cmd](number1, number2)
+            print arithmetic_functions[cmd](number1, number2, remaining_args)
         else:
             print "That is not a valid command. Try again. Format: Operation Number1 Number2"
 
