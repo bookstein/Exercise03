@@ -14,11 +14,16 @@ def subtract(args):
 
 def multiply(args):
     """Multiplies the two inputs together"""
-    pass
-
+    total = 1
+    for num in args:
+        total *= num
+    return total
 
 def divide(args):
-    pass
+    total = args[0]
+    for num in args[1:]:
+        total /= num
+    return total
 
 def square(args):
     pass
