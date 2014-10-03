@@ -44,15 +44,12 @@ def main():
                 continue
 
             # use dictionary and dispatch method to call function
-            print arithmetic_functions[cmd](tokens)
+            print arithmetic_functions[cmd](tokens[1:])
 
         else:
             print "That was not a valid entry. Please choose a valid mathematical operation from the following list:"
             for key in arithmetic_functions:
                 print key
-
-
-
 
 
 if __name__ == '__main__':
