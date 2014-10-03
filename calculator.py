@@ -4,7 +4,7 @@ calculator.py
 Using our arithmetic.py file from Exercise02, create the
 calculator program yourself in this file.
 """
-import arithmetic
+import arithmetic_mytry
 
 def main():
 
