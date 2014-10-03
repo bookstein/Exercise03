@@ -25,8 +25,8 @@ def main():
 
         # turn user input into a list
         tokens = user_input.split()
-        cmd = tokens[0]
 
+        cmd = tokens[0]
         # check if first item is Q or q
         if cmd == "q" or cmd == "Q":
             break

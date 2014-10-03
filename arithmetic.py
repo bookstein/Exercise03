@@ -1,5 +1,6 @@
 def add(args):
     """Returns the sum of the two input integers"""
+    print args
     total = 0
     for num in args:
         total += num
@@ -41,5 +42,9 @@ def power(args):
     return base
 
 def mod(args):
-    pass
     """Returns the remainder when the first integer is divided by the second integer."""
+    total = args[0]
+    print args
+    # for num in args[1:]:
+    #     total = total % num
+    # return total
