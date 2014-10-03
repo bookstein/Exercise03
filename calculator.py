@@ -35,9 +35,12 @@ def main():
             # try / except -- check validity of input
             try:
                 for idx in range(1, len(tokens)):
+                    if tokens[idx] == "0":
+                       tokens[idx] = int(tokens[idx])
                     if float(tokens[idx]):
                         tokens[idx] = float(tokens[idx])
-                        #print tokens[idx]
+                        print tokens[idx]
+
 
             except:
                 print "Please enter valid numbers. Try again"
