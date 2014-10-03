@@ -1,6 +1,5 @@
 def add(args):
     """Returns the sum of the two input integers"""
-    print args
     total = 0
     for num in args:
         total += num
@@ -23,8 +22,12 @@ def multiply(args):
 def divide(args):
     total = args[0]
     for num in args[1:]:
-        total /= num
-    return total
+        if 0 in args[2:]:
+            print "Cannot divide by zero."
+            break
+        else:
+            total = total / num
+            return total
 
 def square(args):
     """Returns the square of the input"""
@@ -44,7 +47,10 @@ def power(args):
 def mod(args):
     """Returns the remainder when the first integer is divided by the second integer."""
     total = args[0]
-    print args
-    # for num in args[1:]:
-    #     total = total % num
-    # return total
+    for num in args[1:]:
+        if 0 in args[2:]:
+            print "Cannot divide by zero."
+            break
+        else:
+            total = total % num
+            return total

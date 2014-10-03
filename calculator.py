@@ -39,7 +39,7 @@ def main():
                        tokens[idx] = int(tokens[idx])
                     if float(tokens[idx]):
                         tokens[idx] = float(tokens[idx])
-                        print tokens[idx]
+                        #print tokens[idx]
 
 
             except:
