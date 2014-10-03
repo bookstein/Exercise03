@@ -26,19 +26,19 @@ def divide(args):
     return total
 
 def square(args):
-    pass
     """Returns the square of the input"""
-    return num1**2
+    return args[0]**2
 
 def cube(args):
-    pass
     """ Returns the cube of the input"""
-    return num1**3
+    return args[0]**3
 
 def power(args):
-    pass
     """Raises the first integer to the power of the second integer and returns the value"""
-
+    base = args[0]
+    for num in args[1:]:
+        base = base ** num
+    return base
 
 def mod(args):
     pass
