@@ -9,14 +9,14 @@ import arithmetic_mytry
 def main():
 
     arithmetic_functions = {
-    '+': arithmetic.add,
-    '-': arithmetic.subtract,
-    '*': arithmetic.multiply,
-    '/': arithmetic.divide,
-    'pow': arithmetic.power,
-    'square': arithmetic.square,
-    'cube': arithmetic.cube,
-    'mod': arithmetic.mod,
+    '+': arithmetic_mytry.add,
+    '-': arithmetic_mytry.subtract,
+    '*': arithmetic_mytry.multiply,
+    '/': arithmetic_mytry.divide,
+    'pow': arithmetic_mytry.power,
+    'square': arithmetic_mytry.square,
+    'cube': arithmetic_mytry.cube,
+    'mod': arithmetic_mytry.mod,
     }
 
     while True:
