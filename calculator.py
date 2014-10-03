@@ -9,19 +9,29 @@ import arithmetic
 def main():
 
     while True:
+        # get user input
         user_input = raw_input("> ")
+
+        # turn user input into a list
         tokens = user_input.split()
-        if tokens[0] == 'q':
+        cmd = tokens[0]
+
+        # check if first item is Q or q
+        if cmd == "q" or cmd == "Q":
             break
 
-        remaining_args = False
+        # try / except -- check validity of input
         try:
-            cmd, number1, number2 = tokens[0], float(tokens[1]), float(tokens[2])
-            if len(tokens) > 3:
-                remaining_args = tokens[3:]
-        except ValueError:
-            print "This calculator can only calculate numbers."
+            for idx in range(1, len(tokens)):
+                if float(tokens[idx]):
+                    tokens[idx] = float(tokens[idx])
+                    print tokens[idx]
+
+        except:
+            print "Please enter valid numbers. Try again"
             continue
+
+        # use dictionary and dispatch method to call function
 
         arithmetic_functions = {
             '+': arithmetic.add,
@@ -34,11 +44,7 @@ def main():
             'mod': arithmetic.mod
         }
 
-        if cmd in arithmetic_functions:
-            print arithmetic_functions[cmd](remaining_args)
-        else:
-            print "That is not a valid command. Try again. Format: Operation Number1 Number2"
 
-   
+
 if __name__ == '__main__':
     main()
