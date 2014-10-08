@@ -1,9 +1,11 @@
 """
 calculator.py
 
+
 Recreated calculator exercise on my own for practice.
 Takes a command and any number of args for math operations.
 """
+
 import arithmetic_mytry
 
 def main():
@@ -37,7 +39,8 @@ def main():
                 for idx in range(1, len(tokens)):
                     if tokens[idx] == "0":
                        tokens[idx] = int(tokens[idx])
-                    elif float(tokens[idx]):
+
+                    if float(tokens[idx]):
                         tokens[idx] = float(tokens[idx])
                         #print tokens[idx]
 
